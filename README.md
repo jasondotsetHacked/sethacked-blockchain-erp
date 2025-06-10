@@ -35,7 +35,6 @@ A JSON-first, hybrid on-chain/off-chain ERP protocol designed to be fully open-s
 ├── deployments/            # Contract ABIs & deployed addresses
 ├── init-erp-project.sh     # Bootstrap script
 ├── hardhat.config.js       # Hardhat configuration
-├── .env.example            # Example environment variables
 └── README.md               # You are here
 ```
 
@@ -46,7 +45,6 @@ A JSON-first, hybrid on-chain/off-chain ERP protocol designed to be fully open-s
 * **Node.js** v16+ & **npm** v8+
 * **Git**
 * **AWS CLI** configured (with permissions for S3 & Aurora)
-* An Ethereum JSON-RPC endpoint (e.g. Infura, Alchemy) & a funded private key
 
 ---
 
@@ -66,12 +64,11 @@ A JSON-first, hybrid on-chain/off-chain ERP protocol designed to be fully open-s
    ./init-erp-project.sh
    ```
 
-3. **Configure environment**
+3. **Configure environment (optional)**
 
-   ```bash
-   cp .env.example .env
-   # then fill in RPC_URL and PRIVATE_KEY in .env
-   ```
+   The local Hardhat network works without any configuration. If you later
+   want to deploy to a testnet, create a `.env` file with `RPC_URL` and
+   `PRIVATE_KEY` variables.
 
 4. **Install AWS SDK** (for your off-chain scripts)
 
@@ -107,11 +104,6 @@ A JSON-first, hybrid on-chain/off-chain ERP protocol designed to be fully open-s
   npx hardhat run scripts/deploy.js --network localhost
   ```
 
-* **Deploy to testnet**
-
-  ```bash
-  npx hardhat run scripts/deploy.js --network testnet
-  ```
 
 ---
 
