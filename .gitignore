@@ -1,1 +1,33 @@
-node_modules
+# Node modules
+node_modules/
+
+# Environment files
+.env
+.env.*.local
+
+# Hardhat build files
+artifacts/
+cache/
+
+# Deployment outputs
+deployments/
+
+# Coverage reports
+coverage/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / editor configs
+.vscode/
+.idea/
+
+# Optional folders (if you generate dist or docs)
+dist/
+docs/
